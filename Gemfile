@@ -76,3 +76,6 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 # For Authorization
 gem 'devise'
+
+#letter Opener
+gem 'letter_opener'
