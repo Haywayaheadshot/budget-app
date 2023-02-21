@@ -1,0 +1,30 @@
+.new-user-nav {
+  background-color: #3778c2;
+  margin: 0;
+  padding: 20px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.next-btn {
+  background-color: inherit;
+  border: 0;
+}
+
+.new-user-nav h1,
+.next-btn {
+  color: #fff;
+}
+
+.sign-up-section ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user_reg_form_ul_li_input {
+  border: none;
+}
