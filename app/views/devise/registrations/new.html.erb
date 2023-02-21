@@ -5,7 +5,9 @@
     <%= button_to "<img src='#{asset_path('back-arrow.png')}' style='width: 20px' />".html_safe, new_user_registration_path %>
     <h1>REGISTER</h1>
     <!-- <%= button_to "Next", new_user_session_path, class: "next-btn" %> -->
+    <div class="actions">
     <%= f.submit "Next", class: "next-btn" %>
+    </div>
   </nav>
     <!-- <%= render "devise/shared/error_messages", resource: resource %> -->
     <ul>
