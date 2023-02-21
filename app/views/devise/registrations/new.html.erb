@@ -5,26 +5,26 @@
     <%= button_to "<img src='#{asset_path('back-arrow.png')}' style='width: 20px' />".html_safe, new_user_registration_path %>
     <h1>REGISTER</h1>
     <!-- <%= button_to "Next", new_user_session_path, class: "next-btn" %> -->
-    <!-- <%= f.submit "Next", class: "next-btn" %> -->
+    <%= f.submit "Next", class: "next-btn" %>
   </nav>
-    <%= render "devise/shared/error_messages", resource: resource %>
+    <!-- <%= render "devise/shared/error_messages", resource: resource %> -->
     <ul>
-      <li class="user_reg_form_ul_li">
+      <!-- <li class="user_reg_form_ul_li">
     <div class="field">
       <%= f.file_field :photo, autofocus: true %><br />
       <%= f.label :Upload_A_Photo %>
     </div>
-    </li>
+    </li> -->
     <li class="user_reg_form_ul_li">
     <div class="field">
       <%= f.label :name, class: "font" %>
-      <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "user_reg_form_ul_li_input" %>
     </div>
     </li>
     <li class="user_reg_form_ul_li">
     <div class="field">
       <%= f.label :email, class: "font" %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "user_reg_form_ul_li_input" %>
     </div>
     </li>
     <li class="user_reg_form_ul_li">
@@ -33,25 +33,25 @@
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
+      <%= f.password_field :password, autocomplete: "new-password", class: "user_reg_form_ul_li_input" %>
     </div>
   </li>
     <li class="user_reg_form_ul_li">
     <div class="field">
       <%= f.label :password_confirmation, class: "font" %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "user_reg_form_ul_li_input" %>
     </div>
     </li>
-    <li class="user_reg_form_ul_li">
+    <!-- <li class="user_reg_form_ul_li">
     <div class="actions">
       <%= f.submit "Sign up", class: "font" %>
     </div>
-    </li>
+    </li> -->
   </ul>
   <% end %>
 </section>
 <section>
-  <h1>Alredy A User?</h1>
+  <h1>Already A User?</h1>
   <%= render "devise/shared/links" %>
 </section>
 

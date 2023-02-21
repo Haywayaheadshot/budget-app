@@ -18,3 +18,14 @@
     color: #fff;
 }
 
+.sign-up-section ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user_reg_form_ul_li_input {
+    border: none;
+}
+
