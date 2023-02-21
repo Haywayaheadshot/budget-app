@@ -15,26 +15,26 @@
  */
 
 .font {
- font-family: 'Nunito Sans', sans-serif;
- font-style: normal;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
 }
 
 button {
-   border-radius: 10px;
-   padding: 5px 10px;
-   font-family: 'Nunito Sans', sans-serif;
-   background-color: inherit;
-   border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: inherit;
+  border: none;
 }
 
 .App,
 p {
-   margin: 0;
-   padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-   list-style: none;
-   margin: 0;
-   padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
