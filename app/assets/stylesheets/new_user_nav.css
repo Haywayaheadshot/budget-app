@@ -1,0 +1,20 @@
+.new-user-nav {
+    background-color: #3778c2;
+    margin: 0;
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.next-btn {
+    background-color: inherit;
+    border: 0;
+}
+
+.new-user-nav h1,
+.next-btn {
+    color: #fff;
+}
+

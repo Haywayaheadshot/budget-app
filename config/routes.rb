@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :groups, only: [:new, :show, :index, :create]
   resources :entities
   root to: "users#new"
-  resources :users
+  resources :users, only: [:new, :index]
 end

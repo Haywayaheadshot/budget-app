@@ -14,7 +14,21 @@
  *= require_self
  */
 
- .font {
-    font-family: 'Nunito Sans', sans-serif;
-    font-style: normal;
- }
+.font {
+ font-family: 'Nunito Sans', sans-serif;
+ font-style: normal;
+}
+
+button {
+   border-radius: 10px;
+   padding: 5px 10px;
+   font-family: 'Nunito Sans', sans-serif;
+   background-color: inherit;
+   border: none;
+}
+
+.App,
+p {
+   margin: 0;
+   padding: 0;
+}
