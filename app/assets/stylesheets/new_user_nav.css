@@ -16,12 +16,12 @@
 
 .new-user-nav h1,
 .next-btn,
-.log-out-btn{
+.log-out-btn {
   color: #fff;
 }
 
 .log-out-btn {
-  font: 1.2rem;
+  font-size: 1.2rem;
   cursor: pointer;
 }
 

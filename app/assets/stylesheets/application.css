@@ -29,6 +29,7 @@ button {
 
 .App-container {
   display: grid;
+
   /* grid-template-columns: auto auto; */
   padding: 0;
   margin: 0;

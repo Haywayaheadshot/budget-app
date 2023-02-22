@@ -1,46 +1,46 @@
 .welcome-page {
-    background-color: #fff;
-    height: 100vh;
+  background-color: #fff;
+  height: 100vh;
 }
 
 .welcome-header,
 .welcome-paragraph {
-    text-align: center;
-    font-size: 3rem;
-    background-color: inherit;
+  text-align: center;
+  font-size: 3rem;
+  background-color: inherit;
 }
 
 .welcome-paragraph {
-    font-size: 2rem;
-    padding: 20px 40px;
+  font-size: 2rem;
+  padding: 20px 40px;
 }
 
 .log-in-sign-up-btns-div {
-    display: grid;
-    place-items: center;
-    gap: 20px;
+  display: grid;
+  place-items: center;
+  gap: 20px;
 }
 
 .login-btn-div,
 .sign-up-btn-div {
-    border: 1px solid grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    padding: 5px 0;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 5px 0;
 }
 
 .login-btn-div {
-    background: #3778c2;
+  background: #3778c2;
 }
 
 .sign-up-btn-div {
-    background: #5fb523;
+  background: #5fb523;
 }
 
 .login-btn,
 .signup-btn {
-    color: #fff;
-    font-size: 1.5rem;
+  color: #fff;
+  font-size: 1.5rem;
 }
