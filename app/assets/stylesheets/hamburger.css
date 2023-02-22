@@ -1,43 +1,43 @@
 /* Add this to your CSS file */
 .hamburger {
-    display: inline-block;
-    cursor: pointer;
-    padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
 }
-  
+
 .line {
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    margin: 5px 0;
-    border-radius: 5px;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+  border-radius: 5px;
 }
-  
-  /* Styling for the hamburger when it's clicked */
+
+/* Styling for the hamburger when it's clicked */
 .hamburger.clicked .line:nth-of-type(1) {
-    transform: rotate(-45deg) translate(-7px, 7px);
+  transform: rotate(-45deg) translate(-7px, 7px);
 }
-  
+
 .hamburger.clicked .line:nth-of-type(2) {
-    opacity: 0;
+  opacity: 0;
 }
-  
+
 .hamburger.clicked .line:nth-of-type(3) {
-    transform: rotate(45deg) translate(-7px, -7px);
+  transform: rotate(45deg) translate(-7px, -7px);
 }
-  
+
 .nav-links {
-    display: none; /* Hide the UL by default */
-    position: absolute;
-    top: 150px;
-    left: 0;
-    background-color: white;
-    padding: 10px;
-    list-style: none;
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-  }
-  
-  .show {
-    display: block !important;
-  }
+  display: none; /* Hide the UL by default */
+  position: absolute;
+  top: 150px;
+  left: 0;
+  background-color: white;
+  padding: 10px;
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.show {
+  display: block !important;
+}

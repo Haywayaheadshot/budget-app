@@ -1,36 +1,36 @@
 .groups-container,
 .transaction-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3vw;
 }
 
 .groups-container h1,
 .transactions-header {
-    font-size: 2rem;
-    background-color: #fff;
-    width: 100%;
-    text-align: center;
+  font-size: 2rem;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
 }
 
 .groups-ul,
 .transaction-ul {
-    display: grid;
-    gap: 20px;
-    padding: 0 10vw;
+  display: grid;
+  gap: 20px;
+  padding: 0 10vw;
 }
 
 .groups-ul li,
 .transaction-ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 1px solid #000;
-    padding: 10px;
-    background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #000;
+  padding: 10px;
+  background-color: #fff;
 }
 
 .add-new-cat-btn-div {
-    background-color: #fff;
+  background-color: #fff;
 }
