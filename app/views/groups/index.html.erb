@@ -4,6 +4,7 @@
   <ul class="groups-ul">
     <% @groups.each do |group| %>
     <li>
+      <%= link_to group_entities_path(:group_id => group.id) do %>
       <div>
         <% if group.icon.attached? %>
         <%= image_tag url_for(group.icon), class: "profile-dp" %>
@@ -15,6 +16,7 @@
       <div>
         <h1>Total transaction amount</h1>
       </div>
+      <% end %>
     </li>
     <% end %>
   </ul>
