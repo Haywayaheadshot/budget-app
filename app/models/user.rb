@@ -11,4 +11,12 @@ class User < ApplicationRecord
   validates :password, presence: true
 
   has_one_attached :photo
+
+  after_initialize :set_default_photo, if: :new_record?
+
+  def set_default_photo
+    unless photo.attached?
+      photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'avatar-icon.png')), filename: 'avatar-icon.png', content_type: 'image/png')
+    end
+  end
 end
