@@ -29,7 +29,6 @@ class GroupsController < ApplicationController
     end
   end
 
-
   # DELETE /groups/1 or /groups/1.json
   # def destroy
   #   @group.destroy
