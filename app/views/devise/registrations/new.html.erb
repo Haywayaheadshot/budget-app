@@ -2,58 +2,53 @@
   
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <nav class="new-user-nav font">
-    <%= button_to "<img src='#{asset_path('back-arrow.png')}' style='width: 20px' />".html_safe, new_user_registration_path %>
+    <%= link_to root_path do %>
+      <%= image_tag asset_path('back-arrow.png'), style: "width: 20px" %>
+    <% end %>
     <h1>REGISTER</h1>
-    <!-- <%= button_to "Next", new_user_session_path, class: "next-btn" %> -->
     <div class="actions">
     <%= f.submit "Next", class: "next-btn" %>
     </div>
   </nav>
-    <!-- <%= render "devise/shared/error_messages", resource: resource %> -->
+    <%= render "devise/shared/error_messages", resource: resource %>
+
     <ul>
-      <!-- <li class="user_reg_form_ul_li">
-    <div class="field">
-      <%= f.file_field :photo, autofocus: true %><br />
+      <li class="user_reg_form_ul_li">
+        <div class="field">
+      <%= f.file_field :photo %>
       <%= f.label :Upload_A_Photo %>
-    </div>
-    </li> -->
+      </div>
+    </li>
     <li class="user_reg_form_ul_li">
-    <div class="field">
-      <%= f.label :name, class: "font" %>
-      <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "user_reg_form_ul_li_input" %>
+      <div class="field">
+        <%= f.label :name, class: "font" %>
+      <%= f.text_field :name, autocomplete: "name", placeholder: 'Full name', class: "form-control" %>
     </div>
     </li>
     <li class="user_reg_form_ul_li">
-    <div class="field">
-      <%= f.label :email, class: "font" %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "user_reg_form_ul_li_input" %>
+      <div class="field">
+        <%= f.label :email, class: "font" %>
+      <%= f.email_field :email, placeholder: 'Email', class: "form-control" %>
     </div>
     </li>
     <li class="user_reg_form_ul_li">
-    <div class="field">
-      <%= f.label :password, class: "font" %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", class: "user_reg_form_ul_li_input" %>
-    </div>
+      <div class="field">
+        <%= f.label :password, class: "font" %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password", class: "user_reg_form_ul_li_input" %>
+      </div>
   </li>
-    <li class="user_reg_form_ul_li">
+  <li class="user_reg_form_ul_li">
     <div class="field">
       <%= f.label :password_confirmation, class: "font" %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "user_reg_form_ul_li_input" %>
     </div>
-    </li>
-    <!-- <li class="user_reg_form_ul_li">
-    <div class="actions">
-      <%= f.submit "Sign up", class: "font" %>
-    </div>
-    </li> -->
-  </ul>
+  </li>
+    </ul>
   <% end %>
-</section>
-<section>
-  <h1>Already A User?</h1>
-  <%= render "devise/shared/links" %>
-</section>
-
+  <section>
+    <h1>Already A User?</h1>
+    <%= render "devise/shared/links" %>
+  </section>

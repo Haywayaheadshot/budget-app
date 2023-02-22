@@ -20,10 +20,6 @@
   <%= value %>
     </div>
  <% end %>
- <% if user_signed_in? %>
- <%= render "shared/logout" %>
- <%end%>
-  <!-- <%= render "shared/new_user_header" %> -->
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     <%= yield %>
