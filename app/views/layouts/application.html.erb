@@ -15,13 +15,21 @@
   </head>
 
   <body class="App">
+    <div>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
     <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">
   <%= value %>
-    </div>
- <% end %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-    <%= yield %>
+</div>
+<% end %>
+<div class="App-container">
+  <% if user_signed_in? %>
+  <%= render "shared/profile" %>
+  <% end %>
+  
+  <%= yield %>
+</div>
   </body>
 </html>

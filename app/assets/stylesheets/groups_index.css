@@ -5,25 +5,18 @@
   justify-content: center;
   align-items: center;
   padding: 0 3vw;
-}
-
-.groups-container h1,
-.transactions-header {
-  font-size: 2rem;
-  background-color: #fff;
-  width: 100%;
-  text-align: center;
+  background-color: #d3d6d9;
+  height: 100%;
 }
 
 .groups-ul,
 .transaction-ul {
   display: grid;
   gap: 20px;
-  padding: 0 10vw;
+  padding: 20px 10vw 20px 10vw;
 }
 
-.groups-ul li,
-.transaction-ul {
+.groups-ul li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 1px solid #000;

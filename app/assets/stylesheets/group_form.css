@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 25vw;
+  padding-top: 10vh;
 }
 
 .group-form-ul {
@@ -22,4 +22,9 @@
 
 .group-form-input {
   height: 30px;
+  min-width: 80vw;
+}
+
+.group-form-ul-li:nth-child(1) .group-form-input {
+  border: 1px solid #000;
 }

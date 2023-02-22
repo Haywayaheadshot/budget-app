@@ -1,4 +1,3 @@
-/* Add this to your CSS file */
 .hamburger {
   display: inline-block;
   cursor: pointer;
@@ -8,7 +7,7 @@
 .line {
   width: 30px;
   height: 3px;
-  background-color: black;
+  background-color: #fff;
   margin: 5px 0;
   border-radius: 5px;
 }
@@ -26,18 +25,27 @@
   transform: rotate(45deg) translate(-7px, -7px);
 }
 
-.nav-links {
-  display: none; /* Hide the UL by default */
-  position: absolute;
-  top: 150px;
-  left: 0;
-  background-color: white;
-  padding: 10px;
-  list-style: none;
-  border-radius: 5px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
 .show {
   display: block !important;
+}
+
+.hamburger-options {
+  background-color: #3778c2;
+}
+
+.hamburger-options section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 50vw;
+  min-height: 100vh;
+  position: fixed;
+  background-color: #3778c2;
+}
+
+.profile-dp {
+  border-radius: 50%;
+  max-width: 80px;
+  margin: 0;
 }

@@ -27,15 +27,33 @@ button {
   border: none;
 }
 
+.App-container {
+  display: grid;
+
+  /* grid-template-columns: auto auto; */
+  padding: 0;
+  margin: 0;
+}
+
 .App,
 p {
   margin: 0;
   padding: 0;
-  background-color: grey;
+  background-color: #d3d6d9;
 }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.hamburger-options {
+  display: none;
+}
+
+.alert,
+.alert-alert,
+.notice {
+  background-color: #fff;
 }

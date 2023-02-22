@@ -8,14 +8,21 @@
   align-items: center;
 }
 
-.next-btn {
+.next-btn,
+.log-out-btn {
   background-color: inherit;
   border: 0;
 }
 
 .new-user-nav h1,
-.next-btn {
+.next-btn,
+.log-out-btn {
   color: #fff;
+}
+
+.log-out-btn {
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .sign-up-section ul {
@@ -26,5 +33,6 @@
 }
 
 .user_reg_form_ul_li_input {
-  border: none;
+  height: 20px;
+  border: 1px solid #000;
 }

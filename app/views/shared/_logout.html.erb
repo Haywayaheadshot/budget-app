@@ -1,34 +1,22 @@
 <nav class="new-user-nav">
-  
-  <ul class="nav-links">
-    <li><a href="#">Link 1</a></li>
-    <li><a href="#">Link 2</a></li>
-    <li><a href="#">Link 3</a></li>
-  </ul>
-<!-- Add this to your HTML file -->
 <div class="hamburger">
   <div class="line"></div>
   <div class="line"></div>
   <div class="line"></div>
 </div>
+  <h2 class="next-btn font"><%= page %></h2>
 
-
-  <h4><%= page %></h4>
-  <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: 'auth-btns' %>
+  <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: 'log-out-btn font' %>
 </nav>
 
 
 <script>
-// Add this to your JavaScript file or script tag
 const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const groupContainer = document.querySelector('.groups-ul');
+const profileShow = document.querySelector('.hamburger-options');
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('clicked');
-  navLinks.classList.toggle('show');
-  // navLinks.style.display = 'block'
-  groupContainer.classList.toggle('move');
+  profileShow.classList.toggle('show');
 });
 
 </script>
