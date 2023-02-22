@@ -15,8 +15,9 @@ class User < ApplicationRecord
   after_initialize :set_default_photo, if: :new_record?
 
   def set_default_photo
-    unless photo.attached?
-      photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'avatar-icon.png')), filename: 'avatar-icon.png', content_type: 'image/png')
-    end
+    return if photo.attached?
+
+    photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'avatar-icon.png')),
+                 filename: 'avatar-icon.png', content_type: 'image/png')
   end
 end

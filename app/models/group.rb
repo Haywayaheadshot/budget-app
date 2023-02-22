@@ -9,8 +9,9 @@ class Group < ApplicationRecord
   after_initialize :set_default_icon, if: :new_record?
 
   def set_default_icon
-    unless icon.attached?
-      icon.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'avatar-icon.png')), filename: 'avatar-icon.png', content_type: 'image/png')
-    end
+    return if icon.attached?
+
+    icon.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'avatar-icon.png')),
+                filename: 'avatar-icon.png', content_type: 'image/png')
   end
 end

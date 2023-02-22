@@ -6,10 +6,10 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
   end
-  
+
   def create
     @group = current_user.groups.build(group_params)
-  
+
     if @group.save
       flash[:notice] = 'Group created successfully.'
       redirect_back(fallback_location: root_path)
