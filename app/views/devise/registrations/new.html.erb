@@ -2,12 +2,12 @@
   
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <nav class="new-user-nav font">
-    <%= link_to root_path do %>
+    <%= link_to unauthenticated_root_path do %>
       <%= image_tag asset_path('back-arrow.png'), style: "width: 20px" %>
     <% end %>
     <h1>REGISTER</h1>
     <div class="actions">
-    <%= f.submit "Next", class: "next-btn" %>
+    <%= f.submit "Next", class: "next-btn font" %>
     </div>
   </nav>
     <%= render "devise/shared/error_messages", resource: resource %>
@@ -21,34 +21,34 @@
     </li>
     <li class="user_reg_form_ul_li">
       <div class="field">
-        <%= f.label :name, class: "font" %>
-      <%= f.text_field :name, autocomplete: "name", placeholder: 'Full name', class: "form-control" %>
+        <%= f.label :name, class: "login-field-label font" %>
+      <%= f.text_field :name, autocomplete: "name", placeholder: 'Full name', class: "user_reg_form_ul_li_input" %>
     </div>
     </li>
     <li class="user_reg_form_ul_li">
       <div class="field">
-        <%= f.label :email, class: "font" %>
-      <%= f.email_field :email, placeholder: 'Email', class: "form-control" %>
+        <%= f.label :email, class: "login-field-label font" %>
+      <%= f.email_field :email, placeholder: 'Email', class: "user_reg_form_ul_li_input" %>
     </div>
     </li>
     <li class="user_reg_form_ul_li">
       <div class="field">
-        <%= f.label :password, class: "font" %>
+        <%= f.label :password, class: "login-field-label font" %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
+        <% end %>
         <%= f.password_field :password, autocomplete: "new-password", class: "user_reg_form_ul_li_input" %>
       </div>
   </li>
   <li class="user_reg_form_ul_li">
     <div class="field">
-      <%= f.label :password_confirmation, class: "font" %><br />
+      <%= f.label :password_confirmation, class: "login-field-label font" %>
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "user_reg_form_ul_li_input" %>
     </div>
   </li>
     </ul>
   <% end %>
   <section>
-    <h1>Already A User?</h1>
+    <h1 class="already-a-user">Already A User?</h1>
     <%= render "devise/shared/links" %>
   </section>
