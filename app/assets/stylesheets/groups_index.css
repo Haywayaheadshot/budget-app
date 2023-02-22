@@ -13,7 +13,7 @@
 .transaction-ul {
   display: grid;
   gap: 20px;
-  padding: 0 10vw 20px 10vw;
+  padding: 20px 10vw 20px 10vw;
 }
 
 .groups-ul li {

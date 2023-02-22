@@ -2,27 +2,23 @@
 <p style="color: green"><%= notice %></p>
 <section class="groups-container">
   <ul class="groups-ul">
+    <% @groups.each do |group| %>
     <li>
       <div>
-        <h1>User Icon</h1>
-        <h2>USer name</h2>
+        <% if group.icon.attached? %>
+        <%= image_tag url_for(group.icon), class: "profile-dp" %>
+      <% else %>
+        <%= image_tag "avatar-icon.png", class: "profile-dp" %>
+      <% end %>
+        <h2><%= group.name  %></h2>
       </div>
       <div>
         <h1>Total transaction amount</h1>
       </div>
     </li>
-    <li>
-      <div>
-        <h1>Category 2</h1>
-      </div>
-    </li>
-    <li>
-      <div>
-        <h1>Category 3</h1>
-      </div>
-    </li>
+    <% end %>
   </ul>
   <div class="add-transaction-div">
-    <%= button_to "Create New Group", class: "add-transaction" %>
+    <%= link_to "<button class='add-transaction'>Create New Group</button>".html_safe, new_group_path %>
   </div>
 </section>
