@@ -1,14 +1,35 @@
+<%= render partial: "shared/logout", locals: { page: "Transactions" } %>
 <p style="color: green"><%= notice %></p>
+<section class="transaction-container">
+  <h1 class="transactions-header"> Total Amount: X</h1>
+  <ul class="transaction-ul">
+    <li>
+      <h1>Group Icon</h1>
+      <div>
+        <h2>Enity Name: X</h2>
+        <h2>Date of transaction</h2>
+      </div>
+      <div>Transaction Amount</div>
+    </li>
+    <li>
+      <h1>Group Icon</h1>
+      <div>
+        <h2>Enity Name: X</h2>
+        <h2>Date of transaction</h2>
+      </div>
+      <div>Transaction Amount</div>
+    </li>
+    <li>
+      <h1>Group Icon</h1>
+      <div>
+        <h2>Enity Name: X</h2>
+        <h2>Date of transaction</h2>
+      </div>
+      <div>Transaction Amount</div>
+    </li>
+    <li>
+      <button>Create New Transaction</button>
+    </li>
+  </ul>
+</section>
 
-<h1>Entities</h1>
-
-<div id="entities">
-  <% @entities.each do |entity| %>
-    <%= render entity %>
-    <p>
-      <%= link_to "Show this entity", entity %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New entity", new_entity_path %>

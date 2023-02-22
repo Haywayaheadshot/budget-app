@@ -1,0 +1,25 @@
+.new-group-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 25vw;
+}
+
+.group-form-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.group-form-ul-li {
+  display: grid;
+  gap: 5px;
+}
+
+.group-form-input {
+  height: 30px;
+}
