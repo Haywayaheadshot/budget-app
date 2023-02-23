@@ -5,6 +5,7 @@ class EntitiesController < ApplicationController
   end
 
   def new
+    @groups = Group.all
     @group = Group.find(params[:group_id])
     @entity = @group.entities.new
     @group_id = params[:group_id]

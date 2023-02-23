@@ -20,6 +20,7 @@
 .groups-ul li {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-items: center;
   border: 1px solid #000;
   padding: 10px;
   background-color: #fff;

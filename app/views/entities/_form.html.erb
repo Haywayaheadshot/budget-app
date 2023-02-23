@@ -7,11 +7,14 @@
   </li>
   <li class="group-form-ul-li">
     <%= form.label :amount, class: "login-field-label font" %>
-    <%= form.text_field :amount, placeholder: 'e.g 10', class: "group-form-input" %>
+    <%= form.number_field :amount, placeholder: 'e.g 10', in: 1.0..100.0, class: "group-form-input" %>
+  </li>
+  <li class="group-form-ul-li">
+    <%= form.select :group_id, @groups.collect { |group| [group.name, group.id] }, { :prompt => 'Choose Group'}, class: "group-form-input", required: true %>
   </li>
   <li>
   <div>
-    <%= form.submit %>
+    <%= form.submit "Save", class: "log-in-submit-btn" %>
   </div>
   </li>
 </ul>

@@ -13,9 +13,7 @@
       <% end %>
         <h2><%= group.name  %></h2>
       </div>
-      <div>
-        <h1>Total transaction amount</h1>
-      </div>
+      <h1>Total: <%= number_to_currency(group.entities.sum(:amount)) %></h1>
     </li>
     <% end %>
     <% end %>
