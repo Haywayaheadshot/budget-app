@@ -1,33 +1,39 @@
 class EntitiesController < ApplicationController
   def index
-    @group = Group.find(params[:group_id])
-    @entities = @group.entities
+    @group = Group.where(:user_id => current_user.id)
+    @entities = GroupEntity.where(:group_id => params[:group_id])
+    @total = 0
+    @entities.each do |t|
+      @total += t.entity.amount
+    end 
   end
 
   def new
-    @groups = Group.all
+    @groups = Group.where(:user_id => current_user.id)
     @group = Group.find(params[:group_id])
     @entity = @group.entities.new
     @group_id = params[:group_id]
   end
 
   def create
-    @group = Group.find(params[:group_id])
-    @entity = Entity.new(entity_params)
-    @group_entity = GroupEntity.new(group: @group, entity: @entity)
-
-    if @entity.save && @group_entity.save
-      # redirect to the group show page
-      redirect_to group_path(@group), notice: 'Entity created successfully.'
+    @entity = Entity.new(entity_params.except(:group_id))
+    @entity.user_id = current_user.id
+  
+    if @entity.save
+      entity_params[:group_id].each do |group|
+        @group_entity = GroupEntity.new(group_id: group, entity_id: @entity.id)
+        @group_entity.save
+      end
+      redirect_to groups_path, notice: 'Entity created successfully.'
     else
-      # render the new entity form again with errors
       render :new
     end
   end
-
+  
   private
-
+  
   def entity_params
-    params.require(:entity).permit(:name, :amount)
+    params.require(:entity).permit(:name, :amount, group_id: [])
   end
+  
 end
