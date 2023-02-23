@@ -5,21 +5,24 @@
   justify-content: center;
   align-items: center;
   padding: 0 3vw;
-
-  /* background-color: #d3d6d9; */
   height: 100%;
 }
 
-.groups-ul,
-.transaction-ul {
-  display: grid;
+.groups-ul {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   padding: 20px 10vw 20px 10vw;
+  overflow-y: scroll;
+  scroll-padding: 24px;
+  scroll-snap-type: y mandatory;
+  height: 70vh;
 }
 
 .groups-ul li {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-items: center;
   border: 1px solid #000;
   padding: 10px;
   background-color: #fff;
@@ -28,4 +31,19 @@
 
 .add-new-cat-btn-div {
   background-color: #fff;
+}
+
+@media (min-width: 745px) {
+  .groups-container,
+  .transaction-container {
+    min-width: 80vw;
+  }
+
+  .groups-ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 70vh;
+  }
 }

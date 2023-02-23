@@ -36,3 +36,13 @@
   height: 20px;
   border: 1px solid #000;
 }
+
+@media (min-width: 745px) {
+  .new-user-nav {
+    padding: 10px 10vw;
+  }
+
+  .next-btn {
+    font-size: 1.5rem;
+  }
+}

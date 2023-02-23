@@ -4,19 +4,19 @@
   <%= image_tag asset_path('back-arrow.png'), style: "width: 20px" %>
   <% end %>
   </div>
-  <h2 class="login-header font">Log in</h2>
+  <h2 class="login-header font">Welcome Back</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <ul class="login-ul">
   <li>
   <div class="field">
     <%= f.label :email, class: "login-field-label font" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "login-field-input" %>
+    <%= f.email_field :email, autofocus: true, placeholder: 'Email', autocomplete: "email", class: "login-field-input" %>
   </div>
   </li>
   <li>
   <div class="field">
     <%= f.label :password, class: "login-field-label font" %><br />
-    <%= f.password_field :password, autocomplete: "current-password", class: "login-field-input" %>
+    <%= f.password_field :password, placeholder: 'Password', autocomplete: "current-password", class: "login-field-input" %>
   </div>
   </li>
   <li>

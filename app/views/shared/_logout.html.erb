@@ -1,9 +1,38 @@
 <nav class="new-user-nav">
-<div class="hamburger">
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div>
-</div>
+  <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+  </div>
+  <div class="profile-ul-desk">
+    <% if current_user&.photo&.attached? %>
+    <%= image_tag url_for(current_user.photo), class: "profile-dp" %>
+  <% else %>
+    <%= image_tag "avatar-icon.png", class: "profile-dp" %>
+  <% end %>
+  <% if user_signed_in?%>
+  <h1 class="user-name font"><%= current_user.name %></h1>
+  </div>
+  <% end %>
+  <!-- <ul>
+        <li>
+            <img src='<%= asset_url("icons/settings.png") %>' alt="Settings Icon" class="profile-icons" />
+            <h4 class="profile-ul-deets font">Account Settings</h4>
+        </li>
+        <li>
+            <img src='<%= asset_url("icons/map.png") %>' alt="Settings Icon" class="profile-icons" />
+            <h4 class="profile-ul-deets font">Merchant finder</h4>
+        </li>
+        <li>
+            <img src='<%= asset_url("icons/giftbox.png") %>' alt="Settings Icon" class="profile-icons" />
+            <h4 class="profile-ul-deets font">Claim promo</h4>
+        </li>
+        <li>
+            <img src='<%= asset_url("icons/share.png") %>' alt="Settings Icon" class="profile-icons" />
+            <h4 class="profile-ul-deets font">Share promo</h4>
+        </li>
+  </ul> -->
+
   <h2 class="next-btn font"><%= page %></h2>
 
   <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }, class: 'log-out-btn font' %>
@@ -11,8 +40,8 @@
 
 
 <script>
-const hamburger = document.querySelector('.hamburger');
-const profileShow = document.querySelector('.hamburger-options');
+var hamburger = document.querySelector('.hamburger');
+var profileShow = document.querySelector('.hamburger-options');
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('clicked');

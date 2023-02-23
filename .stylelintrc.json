@@ -26,7 +26,12 @@
           ]
         }
       ],
-      "csstree/validator": true
+      "csstree/validator": {
+        "properties": {
+          "width": "| fit-content",
+          "height": "| fit-content"
+        }
+      }
     },
     "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css"]
   }
