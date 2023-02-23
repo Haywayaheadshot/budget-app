@@ -24,24 +24,24 @@ RSpec.describe 'Groups Page', type: :feature do
     end
 
     it 'Has log out button' do
-        expect(page).to have_content('Log out')
+      expect(page).to have_content('Log out')
     end
 
     it 'Has hamburger' do
-        expect(page).to have_css('.hamburger', visible: false)
+      expect(page).to have_css('.hamburger', visible: false)
     end
 
     it 'Has profile picture' do
-        expect(page).to have_css('.profile-dp')
-        expect(page).to have_css('.user-name')
+      expect(page).to have_css('.profile-dp')
+      expect(page).to have_css('.user-name')
     end
 
     it 'Has user name' do
-        expect(page).to have_content('nameTest1')
+      expect(page).to have_content('nameTest1')
     end
 
     it 'displays the form to create a new group' do
-        click_on(class: 'add-transaction')
+      click_on(class: 'add-transaction')
       expect(page).to have_content('Name')
       expect(page).to have_content('Icon')
     end

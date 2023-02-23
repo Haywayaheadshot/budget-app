@@ -11,8 +11,8 @@ RSpec.describe 'Entities Page', type: :feature do
   before(:each) do
     @user = User.create(email: 'test1@mail.com', name: 'nameTest1', password: '112233', password_confirmation: '112233')
     @group = Group.create(name: 'Holiday', user_id: @user.id)
-    @entity_one = Entity.create(name: "macDonalds", amount: 20, user_id: @user.id)
-    @entity_two = Entity.create(name: "KFC", amount: 20, user_id: @user.id)
+    @entity_one = Entity.create(name: 'macDonalds', amount: 20, user_id: @user.id)
+    @entity_two = Entity.create(name: 'KFC', amount: 20, user_id: @user.id)
     @group_entity_one = GroupEntity.create(entity_id: @entity_one.id, group_id: @group.id)
     @group_entity_two = GroupEntity.create(entity_id: @entity_two.id, group_id: @group.id)
     visit unauthenticated_root_path
@@ -35,12 +35,12 @@ RSpec.describe 'Entities Page', type: :feature do
     end
 
     it 'Has hamburger' do
-        expect(page).to have_css('.hamburger', visible: false)
+      expect(page).to have_css('.hamburger', visible: false)
     end
 
     it 'Has profile picture' do
-        expect(page).to have_css('.profile-dp')
-        expect(page).to have_css('.user-name')
+      expect(page).to have_css('.profile-dp')
+      expect(page).to have_css('.user-name')
     end
 
     it 'Has user name' do

@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-  
+
     if @group.save
       flash[:notice] = 'Group created successfully.'
       redirect_back(fallback_location: root_path)
@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
       flash.now[:alert] = 'Unable to create group.'
       render :new
     end
-  end  
+  end
 
   private
 

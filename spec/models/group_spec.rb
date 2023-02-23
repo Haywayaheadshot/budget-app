@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Group, type: :model do
   before do
     @user = User.create(email: 'test1@mail.com', name: 'nameTest1', password: '112233', password_confirmation: '112233')
-    @group_one = Group.create(name: "Holiday", user_id: @user.id)
+    @group_one = Group.create(name: 'Holiday', user_id: @user.id)
   end
 
   it 'name should be present' do
