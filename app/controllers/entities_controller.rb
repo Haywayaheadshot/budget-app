@@ -17,7 +17,7 @@ class EntitiesController < ApplicationController
 
     if @entity.save && @group_entity.save
       # redirect to the group show page
-      redirect_to group_path(@group), notice: "Entity created successfully."
+      redirect_to group_path(@group), notice: 'Entity created successfully.'
     else
       # render the new entity form again with errors
       render :new
@@ -29,5 +29,4 @@ class EntitiesController < ApplicationController
   def entity_params
     params.require(:entity).permit(:name, :amount)
   end
-
 end
