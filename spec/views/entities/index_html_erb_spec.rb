@@ -6,7 +6,6 @@ Capybara.register_driver :chrome do |app|
 end
 Capybara.default_driver = :chrome
 
-
 RSpec.describe 'Entities Page', type: :feature do
   before(:each) do
     @user = User.create(email: 'test1@mail.com', name: 'nameTest1', password: '112233', password_confirmation: '112233')
