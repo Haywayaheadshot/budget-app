@@ -1,5 +1,6 @@
 <div class="new-group-form">
-  <%= form_with model: @group, local: true, data: { remote: true } do |form| %>
+  <%= form_with(model: @group, url: create_group_path) do |form| %>
+  
   <ul class="group-form-ul">
     <li class="group-form-ul-li">
       <%= form.label :name, class: "login-field-label font" %>

@@ -20,6 +20,23 @@
   gap: 5px;
 }
 
+.groups-checkbox {
+  max-height: 200px;
+  min-width: 50vw;
+  overflow-y: scroll;
+  scroll-padding: 24px;
+  scroll-snap-type: y mandatory;
+
+  /* display: flex; */
+}
+
+.checkbox-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .group-form-input {
   height: 30px;
   min-width: 80vw;

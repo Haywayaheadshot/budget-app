@@ -6,16 +6,16 @@
   <% end %>
 </section>
 <section class="transaction-container">
-  <h1 class="transactions-header">Total Amount: <%= number_to_currency(@entities.sum(:amount)) %></h1>
+  <h1 class="transactions-header">Total Amount: <%= number_to_currency(@total) %></h1>
   <ul class="transaction-ul">
     <% @entities.each do |entity| %>
     <li>
-      <%= image_tag url_for(@group.icon), class: "profile-dp" %>
+      <%= image_tag url_for(entity.group.icon), class: "profile-dp" %>
       <div>
-        <h3 class="font"><%= entity.name %></h3>
-        <h5 class="font"><%= entity.created_at %></h5>
+        <h3 class="font"><%= entity.entity.name %></h3>
+        <h5 class="font"><%= entity.group.created_at %></h5>
       </div>
-      <h3 class="font"><%= entity.amount %></h3>
+      <h3 class="font"><%= entity.entity.amount %></h3>
     </li>
     <% end %>
   </ul>

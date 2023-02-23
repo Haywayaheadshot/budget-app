@@ -9,14 +9,11 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
+    @group.user_id = current_user.id
+    return unless @group.save
 
-    if @group.save
-      flash[:notice] = 'Group created successfully.'
-      redirect_back(fallback_location: root_path)
-    else
-      flash.now[:alert] = 'Unable to create group.'
-      render :new
-    end
+    flash[:notice] = 'Group created successfully.'
+    redirect_to groups_path
   end
 
   private

@@ -16,3 +16,6 @@ General Text - Proxima Nova Light / Used -
 
     # get the entities associated with the group
     @entities = @group.entities
+
+
+ 
