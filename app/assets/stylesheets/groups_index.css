@@ -12,7 +12,8 @@
 
 .groups-ul,
 .transaction-ul {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   padding: 20px 10vw 20px 10vw;
 }
@@ -29,4 +30,19 @@
 
 .add-new-cat-btn-div {
   background-color: #fff;
+}
+
+@media (min_width: 745px) {
+  /* .groups-container,
+.transaction-container {
+  min-width: 80vw;
+} */
+
+.groups-ul,
+.transaction-ul {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  width: inherit;
+}
 }

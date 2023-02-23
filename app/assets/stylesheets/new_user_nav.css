@@ -36,3 +36,9 @@
   height: 20px;
   border: 1px solid #000;
 }
+
+@media (min-width: 745px) {
+  .next-btn {
+    font-size: 2rem;
+  }
+}

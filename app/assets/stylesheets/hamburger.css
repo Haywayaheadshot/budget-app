@@ -49,3 +49,41 @@
   max-width: 80px;
   margin: 0;
 }
+
+.profile-ul-desk {
+  display: none;
+}
+
+@media (min-width: 745px) {
+  .hamburger {
+    display: none;
+  }
+
+  .profile-ul-desk {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 10px;
+  }
+
+  .user-name {
+    font-size: 1rem;
+  }
+
+  .profile-ul-desk li {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-ul-deets {
+    font-size: 0.5rem;
+  }
+
+  .profile-icons {
+    width: 15px;
+  }
+}
