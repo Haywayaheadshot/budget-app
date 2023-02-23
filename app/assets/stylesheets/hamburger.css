@@ -61,11 +61,10 @@
 
   .profile-ul-desk {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     padding: 0;
-    gap: 10px;
   }
 
   .user-name {
@@ -85,5 +84,13 @@
 
   .profile-icons {
     width: 15px;
+  }
+
+  .profile-dp {
+    max-height: 50px;
+  }
+
+  .user-name {
+    font-size: 0.8rem;
   }
 }

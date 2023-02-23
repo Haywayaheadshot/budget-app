@@ -1,3 +1,14 @@
+.transaction-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10vw 20px 10vw;
+  overflow-y: scroll;
+  scroll-padding: 24px;
+  scroll-snap-type: y mandatory;
+  height: 50vh;
+}
+
 .transaction-ul li {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -7,6 +18,7 @@
   place-items: center;
   gap: 15px;
   border-radius: 10px;
+  height: fit-content;
 }
 
 .transactions-header {
@@ -21,4 +33,14 @@
   width: fit-content;
   background: #fff;
   border: 1px solid #000;
+}
+
+@media (min-width: 745px) {
+  .transaction-ul {
+  display: grid;
+  grid-template-columns: auto auto;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 50vh;
+  }
 }

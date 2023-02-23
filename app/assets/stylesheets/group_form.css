@@ -28,3 +28,9 @@
 .group-form-ul-li:nth-child(1) .group-form-input {
   border: 1px solid #000;
 }
+
+@media (min-width: 745px) {
+  .group-form-input {
+    min-width: 50vw;
+  }
+}

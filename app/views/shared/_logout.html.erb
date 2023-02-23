@@ -1,20 +1,20 @@
 <nav class="new-user-nav">
-    <div class="hamburger">
+  <div class="hamburger">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
-    </div>
-      <ul class="profile-ul-desk">
-        <li>
-          <% if current_user&.photo&.attached? %>
-          <%= image_tag url_for(current_user.photo), class: "profile-dp" %>
-        <% else %>
-          <%= image_tag "avatar-icon.png", class: "profile-dp" %>
-        <% end %>
-        <% if user_signed_in?%>
-        <h1 class="user-name font"><%= current_user.name %></h1>
-        <% end %>
-        </li>
+  </div>
+  <div class="profile-ul-desk">
+    <% if current_user&.photo&.attached? %>
+    <%= image_tag url_for(current_user.photo), class: "profile-dp" %>
+  <% else %>
+    <%= image_tag "avatar-icon.png", class: "profile-dp" %>
+  <% end %>
+  <% if user_signed_in?%>
+  <h1 class="user-name font"><%= current_user.name %></h1>
+  </div>
+  <% end %>
+  <!-- <ul>
         <li>
             <img src='<%= asset_url("icons/settings.png") %>' alt="Settings Icon" class="profile-icons" />
             <h4 class="profile-ul-deets font">Account Settings</h4>
@@ -31,7 +31,7 @@
             <img src='<%= asset_url("icons/share.png") %>' alt="Settings Icon" class="profile-icons" />
             <h4 class="profile-ul-deets font">Share promo</h4>
         </li>
-    </ul>
+  </ul> -->
 
   <h2 class="next-btn font"><%= page %></h2>
 
