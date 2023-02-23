@@ -4,9 +4,14 @@
   background-color: #fff;
 }
 
-.login-back-div {
+.login-back-div,
+.transaction-back-div {
   background-color: #3778c2;
   padding: 30px 20px;
+}
+
+.transaction-back-div {
+  padding: 6px 20px;
 }
 
 .login-header {

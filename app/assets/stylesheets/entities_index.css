@@ -4,6 +4,9 @@
   border: 1px solid #000;
   padding: 10px;
   background-color: #fff;
+  place-items: center;
+  gap: 15px;
+  border-radius: 10px;
 }
 
 .transactions-header {
@@ -17,4 +20,5 @@
 .add-transaction-div {
   width: fit-content;
   background: #fff;
+  border: 1px solid #000;
 }
