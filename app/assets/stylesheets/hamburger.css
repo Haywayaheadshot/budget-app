@@ -67,10 +67,6 @@
     padding: 0;
   }
 
-  .user-name {
-    font-size: 1rem;
-  }
-
   .profile-ul-desk li {
     display: flex;
     flex-direction: column-reverse;

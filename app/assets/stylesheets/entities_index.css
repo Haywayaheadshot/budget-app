@@ -37,10 +37,10 @@
 
 @media (min-width: 745px) {
   .transaction-ul {
-  display: grid;
-  grid-template-columns: auto auto;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  height: 50vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 50vh;
   }
 }
