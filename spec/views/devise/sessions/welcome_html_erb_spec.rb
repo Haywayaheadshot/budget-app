@@ -34,12 +34,12 @@ RSpec.describe 'Welcome Page', type: :feature do
     end
 
     it 'Has user name' do
-        click_on(class: 'signup-btn')
-        expect(page).to have_content('Email')
-        expect(page).to have_content('Password')
-        expect(page).to have_content('Password confirmation')
-        expect(page).to have_content('Upload a photo')
-        expect(page).to have_button('Next')
+      click_on(class: 'signup-btn')
+      expect(page).to have_content('Email')
+      expect(page).to have_content('Password')
+      expect(page).to have_content('Password confirmation')
+      expect(page).to have_content('Upload a photo')
+      expect(page).to have_button('Next')
     end
   end
 end
