@@ -9,3 +9,10 @@ General Text - Proxima Nova Light / Used -
 
 
   <img src="<%= url_for(current_user.photo) %>" alt="User Display Image" class="img-fluid rounded-circle" style="width: 50px; height: 50px;">
+
+
+    # find the group by id
+    @group = Group.find(params[:id])
+
+    # get the entities associated with the group
+    @entities = @group.entities

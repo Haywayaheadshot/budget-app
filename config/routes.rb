@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
 
   resources :groups, only: [:new, :index] do 
-    resources :entities, only: [:create]
+    resources :entities, only: [:create, :new]
   end
   get  '/groups/:group_id/entities', to: 'entities#index', as: 'groups_entities'
   post '/groups/:group_id/', to: 'groups#create', as: 'create_group'

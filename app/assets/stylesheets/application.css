@@ -39,7 +39,7 @@ button {
 p {
   margin: 0;
   padding: 0;
-  background-color: #d3d6d9;
+  background-color: #fff;
 }
 
 ul {
@@ -56,4 +56,11 @@ ul {
 .alert-alert,
 .notice {
   background-color: #fff;
+}
+
+a,
+a:active,
+a:hover {
+  text-decoration: none;
+  color: #434b54
 }

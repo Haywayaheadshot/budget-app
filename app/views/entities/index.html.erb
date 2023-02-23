@@ -4,37 +4,23 @@
   <%= link_to unauthenticated_root_path do %>
   <%= image_tag asset_path('back-arrow.png'), style: "width: 20px" %>
   <% end %>
-  </div>
+</div>
 <section class="transaction-container">
   <h1 class="transactions-header"> Total Amount: X</h1>
   <ul class="transaction-ul">
+    <% @entities.each do |entity| %>
     <li>
-      <h1>Group Icon</h1>
+      <%= image_tag url_for(@group.icon), class: "profile-dp" %>
       <div>
-        <h2>Enity Name: X</h2>
-        <h2>Date of transaction</h2>
+        <h3 class="font"><%= entity.name %></h3>
+        <h5 class="font"><%= entity.created_at %></h5>
       </div>
-      <div>Transaction Amount</div>
+      <h3 class="font"><%= entity.amount %></h3>
     </li>
-    <li>
-      <h1>Group Icon</h1>
-      <div>
-        <h2>Enity Name: X</h2>
-        <h2>Date of transaction</h2>
-      </div>
-      <div>Transaction Amount</div>
-    </li>
-    <li>
-      <h1>Group Icon</h1>
-      <div>
-        <h2>Enity Name: X</h2>
-        <h2>Date of transaction</h2>
-      </div>
-      <div>Transaction Amount</div>
-    </li>
+    <% end %>
   </ul>
   <div class="add-transaction-div">
-    <%= button_to "Create New Transaction", class: "add-transaction" %>
+    <%= link_to "<button class='add-transaction'>Create New Transaction</button>".html_safe, new_group_entity_path %>
   </div>
 </section>
 
