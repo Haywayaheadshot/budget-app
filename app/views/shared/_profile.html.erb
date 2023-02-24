@@ -3,7 +3,7 @@
     <% if current_user&.photo&.attached? %>
       <%= image_tag url_for(current_user.photo), class: "profile-dp" %>
     <% else %>
-      <%= image_tag "avatar-icon.png", class: "profile-dp" %>
+      <%= image_tag "images/avatar-icon.png", class: "profile-dp" %>
     <% end %>
     <% if user_signed_in?%>
     <h1 class="user-name font"><%= current_user.name %></h1>
