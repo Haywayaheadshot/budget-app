@@ -14,24 +14,30 @@
   <h1 class="user-name font"><%= current_user.name %></h1>
   </div>
   <% end %>
-  <!-- <ul>
-        <li>
+  <div class="desktop-options">
+    <ul class="desk-ul-pop">
+          <li>
+            <img src='<%= asset_url("icons/home.png") %>' alt="Settings Icon" class="profile-icons" />
+            <%= link_to "<button class='profile-ul-deets font'>Home</button>".html_safe, authenticated_root_path %>
+          </li>
+          <li>
             <img src='<%= asset_url("icons/settings.png") %>' alt="Settings Icon" class="profile-icons" />
             <h4 class="profile-ul-deets font">Account Settings</h4>
-        </li>
-        <li>
+          </li>
+          <li>
             <img src='<%= asset_url("icons/map.png") %>' alt="Settings Icon" class="profile-icons" />
             <h4 class="profile-ul-deets font">Merchant finder</h4>
-        </li>
-        <li>
+          </li>
+          <li>
             <img src='<%= asset_url("icons/giftbox.png") %>' alt="Settings Icon" class="profile-icons" />
             <h4 class="profile-ul-deets font">Claim promo</h4>
-        </li>
-        <li>
+          </li>
+          <li>
             <img src='<%= asset_url("icons/share.png") %>' alt="Settings Icon" class="profile-icons" />
             <h4 class="profile-ul-deets font">Share promo</h4>
-        </li>
-  </ul> -->
+          </li>
+    </ul>
+  </div>
 
   <h2 class="next-btn font"><%= page %></h2>
 
@@ -42,11 +48,17 @@
 <script>
 var hamburger = document.querySelector('.hamburger');
 var profileShow = document.querySelector('.hamburger-options');
+var deskDp = document.querySelector('.profile-ul-desk');
+var deskOptions = document.querySelector('.desktop-options')
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('clicked');
   profileShow.classList.toggle('show');
 });
+
+deskDp.addEventListener('click', () => {
+  deskOptions.classList.toggle('show');
+})
 
 </script>
 

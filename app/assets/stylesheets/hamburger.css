@@ -29,8 +29,10 @@
   display: block !important;
 }
 
-.hamburger-options {
+.hamburger-options,
+.desktop-options {
   background-color: #3778c2;
+  display: none;
 }
 
 .hamburger-options section {
@@ -88,5 +90,16 @@
 
   .user-name {
     font-size: 0.8rem;
+  }
+
+  .desk-ul-pop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 50vw;
+    min-height: 100vh;
+    position: fixed;
+    background-color: #3778c2;
   }
 }
