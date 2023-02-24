@@ -1,0 +1,26 @@
+<%= render partial: "shared/logout", locals: { page: "Transactions" } %>
+<p style="color: green"><%= notice %></p>
+<section class="transaction-back-div">
+  <%= link_to :back do %>
+  <%= image_tag asset_path('back-arrow.png'), style: "width: 20px" %>
+  <% end %>
+</section>
+<section class="transaction-container">
+  <h1 class="transactions-header">Total Amount: <%= number_to_currency(@total) %></h1>
+  <ul class="transaction-ul">
+    <% @entities.each do |entity| %>
+    <li>
+      <%= image_tag url_for(entity.group.icon), class: "profile-dp" %>
+      <div>
+        <h3 class="font"><%= entity.entity.name %></h3>
+        <h5 class="font"><%= entity.group.created_at %></h5>
+      </div>
+      <h3 class="font"><%= entity.entity.amount %></h3>
+    </li>
+    <% end %>
+  </ul>
+  <div class="add-transaction-div">
+    <%= link_to "<button class='add-transaction'>Create New Transaction</button>".html_safe, new_group_entity_path %>
+  </div>
+</section>
+

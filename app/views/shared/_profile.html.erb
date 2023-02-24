@@ -1,0 +1,31 @@
+<div class="hamburger-options">
+    <section>
+    <% if current_user&.photo&.attached? %>
+      <%= image_tag url_for(current_user.photo), class: "profile-dp" %>
+    <% else %>
+      <%= image_tag "images/avatar-icon.png", class: "profile-dp" %>
+    <% end %>
+    <% if user_signed_in?%>
+    <h1 class="user-name font"><%= current_user.name %></h1>
+    <% end %>
+    <ul class="profile-ul">
+        <li>
+            <img src='<%= asset_url("icons/settings.png") %>' alt="Settings Icon" class="profile-icons" />
+            <h4 class="profile-ul-deets font">Account Settings</h4>
+        </li>
+        <li>
+            <img src='<%= asset_url("icons/map.png") %>' alt="Settings Icon" class="profile-icons" />
+            <h4 class="profile-ul-deets font">Merchant finder</h4>
+        </li>
+        <li>
+            <img src='<%= asset_url("icons/giftbox.png") %>' alt="Settings Icon" class="profile-icons" />
+            <h4 class="profile-ul-deets font">Claim promo</h4>
+        </li>
+        <li>
+            <img src='<%= asset_url("icons/share.png") %>' alt="Settings Icon" class="profile-icons" />
+            <h4 class="profile-ul-deets font">Share promo</h4>
+        </li>
+    </ul>
+   </section>
+</div>
+  

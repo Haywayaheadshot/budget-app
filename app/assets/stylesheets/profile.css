@@ -1,0 +1,28 @@
+.user-name {
+  color: #fff;
+}
+
+.profile-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vw;
+}
+
+.profile-ul li {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
+}
+
+.profile-ul-deets {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 20px;
+}
+
+.profile-icons {
+  max-width: 40px;
+}

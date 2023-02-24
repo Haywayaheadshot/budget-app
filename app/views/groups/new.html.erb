@@ -1,0 +1,9 @@
+<%= render partial: "shared/logout", locals: { page: "New Category" } %>
+<section class="transaction-back-div">
+  <%= link_to authenticated_root_path do %>
+  <%= image_tag asset_path('back-arrow.png'), style: "width: 20px" %>
+  <% end %>
+</section>
+<section class="new-group-container">
+  <%= render "form", group: @group %>
+</section>

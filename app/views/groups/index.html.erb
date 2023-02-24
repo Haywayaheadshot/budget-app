@@ -1,0 +1,24 @@
+<%= render partial: "shared/logout", locals: { page: "Categories" } %>
+<p style="color: green"><%= notice %></p>
+<section class="groups-container">
+  <ul class="groups-ul">
+    <% @groups.each do |group| %>
+    <%= link_to groups_entities_path(:group_id => group.id) do %>
+    <li>
+      <div>
+        <% if group.icon.attached? %>
+        <%= image_tag url_for(group.icon), class: "profile-dp" %>
+      <% else %>
+        <%= image_tag "images/avatar-icon.png", class: "profile-dp" %>
+      <% end %>
+        <h2><%= group.name  %></h2>
+      </div>
+      <h1>Total: <%= number_to_currency(group.entities.sum(:amount)) %></h1>
+    </li>
+    <% end %>
+    <% end %>
+  </ul>
+  <div class="add-transaction-div">
+    <%= link_to "<button class='add-transaction'>Create New Group</button>".html_safe, new_group_path %>
+  </div>
+</section>

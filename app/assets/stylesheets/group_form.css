@@ -1,0 +1,53 @@
+.new-group-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+}
+
+.group-form-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.group-form-ul-li {
+  display: grid;
+  gap: 5px;
+}
+
+.groups-checkbox {
+  max-height: 200px;
+  min-width: 50vw;
+  overflow-y: scroll;
+  scroll-padding: 24px;
+  scroll-snap-type: y mandatory;
+
+  /* display: flex; */
+}
+
+.checkbox-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-form-input {
+  height: 30px;
+  min-width: 80vw;
+}
+
+.group-form-ul-li:nth-child(1) .group-form-input {
+  border: 1px solid #000;
+}
+
+@media (min-width: 745px) {
+  .group-form-input {
+    min-width: 50vw;
+  }
+}

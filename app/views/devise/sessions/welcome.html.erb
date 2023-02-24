@@ -1,0 +1,26 @@
+<section class="welcome-page">
+    <div>
+        <h1 class="welcome-header font">
+            WELCOME TO EXPENDITURE TRACKER
+        </h1>
+        <p class="welcome-paragraph font">
+            All your expenditures in one place.
+            <br />
+            Manage them with just a click.
+        </p>
+    </div>
+    <div class="log-in-sign-up-btns-div">
+        <section>
+            <h4 class="font">Already a member?</h4>
+            <div class="login-btn-div">
+                <%= link_to "<button class='login-btn font'>Login</button>".html_safe, new_user_session_path %>
+            </div>
+        </section>
+        <section>
+            <h4 class="font">Not a member?</h4>
+            <div class="sign-up-btn-div">
+                <%= link_to "<button class='signup-btn font'>Sign Up</button>".html_safe, new_user_registration_url %>
+            </div>
+        </section>
+    </div>
+</section>
