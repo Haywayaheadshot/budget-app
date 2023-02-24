@@ -97,9 +97,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 50vw;
+    min-width: 20vw;
     min-height: 100vh;
     position: fixed;
     background-color: #3778c2;
+    left: 0px;
+    top: 12vh;
   }
 }
