@@ -46,7 +46,7 @@
 
 - [Live Demo](https://budgetapp-ml67.onrender.com)
 
-- [Loom Video Link]()
+- [Live Video Link]()
 
 ## 💻 Getting Started <a name="getting-started"></a>
 > To get a local copy up and running, follow these steps.
