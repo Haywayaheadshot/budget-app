@@ -46,7 +46,7 @@
 
 - [Live Demo](https://budgetapp-ml67.onrender.com)
 
-- [Live Video Link](https://drive.google.com/file/d/1oMF9gr1RwVrikDEjVRehgM2oy8-LRc80/view?usp=sharing)
+- [Live Video Link](https://youtu.be/hr4TgtRkKzc)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 > To get a local copy up and running, follow these steps.
