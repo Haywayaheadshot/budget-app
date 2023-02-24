@@ -101,7 +101,7 @@
     min-height: 100vh;
     position: fixed;
     background-color: #3778c2;
-    left: 0px;
+    left: 0;
     top: 12vh;
   }
 }
