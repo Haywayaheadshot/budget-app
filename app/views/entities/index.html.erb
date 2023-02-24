@@ -1,7 +1,7 @@
 <%= render partial: "shared/logout", locals: { page: "Transactions" } %>
 <p style="color: green"><%= notice %></p>
 <section class="transaction-back-div">
-  <%= link_to unauthenticated_root_path do %>
+  <%= link_to :back do %>
   <%= image_tag asset_path('back-arrow.png'), style: "width: 20px" %>
   <% end %>
 </section>
