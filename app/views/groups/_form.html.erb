@@ -1,0 +1,20 @@
+<div class="new-group-form">
+  <%= form_with(model: @group, url: create_group_path) do |form| %>
+  
+  <ul class="group-form-ul">
+    <li class="group-form-ul-li">
+      <%= form.label :name, class: "login-field-label font" %>
+      <%= form.text_field :name, placeholder: 'e.g February Transactions', value: '', class: "group-form-input" %>
+    </li>
+    <li class="group-form-ul-li">
+      <%= form.label :icon, class: "login-field-label font" %>
+      <%= form.file_field :icon, class: "group-form-input" %>
+    </li>
+    <li class="group-form-ul-li">   
+      <div>
+        <%= form.submit "Save", class: "log-in-submit-btn" %>
+      </div>
+    </li>
+  </ul>
+  <% end %>
+</div>

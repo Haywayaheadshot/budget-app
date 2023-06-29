@@ -1,0 +1,7 @@
+<nav class="new-user-nav">
+    <%= button_to "Sign up", new_user_registration_path %>
+    <% if current_page?(new_user_registration_path) %>
+      <h1>Register</h1>
+    <% end %>
+    <%= button_to "Log in", new_user_session_path %>
+  </nav>  

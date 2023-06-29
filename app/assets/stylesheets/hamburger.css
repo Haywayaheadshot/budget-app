@@ -1,0 +1,107 @@
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* Styling for the hamburger when it's clicked */
+.hamburger.clicked .line:nth-of-type(1) {
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.hamburger.clicked .line:nth-of-type(2) {
+  opacity: 0;
+}
+
+.hamburger.clicked .line:nth-of-type(3) {
+  transform: rotate(45deg) translate(-7px, -7px);
+}
+
+.show {
+  display: block !important;
+}
+
+.hamburger-options,
+.desktop-options {
+  background-color: #3778c2;
+  display: none;
+}
+
+.hamburger-options section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 50vw;
+  min-height: 100vh;
+  position: fixed;
+  background-color: #3778c2;
+}
+
+.profile-dp {
+  border-radius: 50%;
+  max-width: 80px;
+  margin: 0;
+}
+
+.profile-ul-desk {
+  display: none;
+}
+
+@media (min-width: 745px) {
+  .hamburger {
+    display: none;
+  }
+
+  .profile-ul-desk {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .profile-ul-desk li {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile-ul-deets {
+    font-size: 0.5rem;
+  }
+
+  .profile-icons {
+    width: 15px;
+  }
+
+  .profile-dp {
+    max-height: 50px;
+  }
+
+  .user-name {
+    font-size: 0.8rem;
+  }
+
+  .desk-ul-pop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 20vw;
+    min-height: 100vh;
+    position: fixed;
+    background-color: #3778c2;
+    left: 0;
+    top: 12vh;
+  }
+}

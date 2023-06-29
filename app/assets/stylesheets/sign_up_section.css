@@ -1,0 +1,16 @@
+.sign-up-section ul {
+  padding-top: 30px;
+}
+
+.already-a-user {
+  text-align: center;
+}
+
+.user_reg_form_ul_li {
+  min-width: 80vw;
+}
+
+.user_reg_form_ul_li .field {
+  display: grid;
+  gap: 5px;
+}
